@@ -11,7 +11,7 @@ if(!empty($_POST["emailid"])) {
 		$stmt = $mysqli->prepare($result);
 		$stmt->bind_param('s',$email);
 		$stmt->execute();
-$stmt->bind_result($count);
+$stmt->bind_result($count);aklvjlks ;vlj 
 $stmt->fetch();
 $stmt->close();
 if($count>0)
