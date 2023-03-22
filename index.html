@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <title>SVKM Hostel Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8ed636c861.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+ 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8bf3afb2fc.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="img/svkmlogo.png" alt=""> </a>
+
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#Amenities" class="nav-link">Amenities</a> </li>
+          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+          <li> <a href="user.php" class="nav-link">Login</a> </li>
+        </ul>
+       
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+
+    hambuger.addEventListener("click", mobileMenu);
+
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Welcome to SVKM Hostel</h1>
+          <p></p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="img/home1.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="img/home1.jpg" alt="" class="slide active" onclick="img('img/home1.jpg')">
+        <img src="img/home2.jpg" alt="" class="slide" onclick="img('img/home2.jpg')">
+        <img src="img/home3.jpg" alt="" class="slide" onclick="img('img/home3.jpg')">
+        <img src="img/home4.jpg" alt="" class="slide" onclick="img('img/home4.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+ 
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="img/a.jpg" alt="" class="image1">
+
+
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>Welcome to Shri Vile Parle Kelvani Mandal Hostel</h5>
+          <h2>ABOUT SVKM HOSTEL</h2>
+          <p>Sarva Vidyalaya Kelvani Mandal was established in the year 1919, by philanthropist
+            Pujya Chhaganbha. The basic principle preached by him “Kar Bhala Hoga Bhala” has been
+            the driving force for the growth of the education activities managed by the trust. Having
+            started with just 6 students then, today the trust manages and runs various schools and
+            colleges both at Kadi and Gandhinagar with more than 46000 students being educated. Of
+            these 46000 students, around 5800 students both boys and girls stay in the hostels being
+            managed by trust. </p>
+          <p>Hostel is not less than a home for students when staying away from their home. Our
+            Shri Vile Parle Kelvani Mandal has large well ventilated dormitories and spacious rooms,
+            also provides clean and calm hostel accommodation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top" id="Amenities">
+    <div class="container">
+      <div class="text">
+        <h2>Our Amenities</h2>
+        <p>Our hostel-blocks has well-ventilated rooms designed to accommodate students on shared occupancy basis.
+          The hostel rooms are furnished with cots, study-tables, chairs, cupboards and bookshelves,
+          enabling comfortable stay and to ensure a learning conducive environment. Each floor has
+          common washrooms with modern sanitation facilities. Hygiene and cleanliness of the rooms, floors
+          and surroundings are taken care of by routine house-keeping services.</p>
+
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fa-solid fa-glass-water"></i>
+            <span>Drinking water with Hot and Cold water dispensers</span>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-plug"></i>
+            <span>24hr power supply</span>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-chess"></i>
+            <span>indoor game facility</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-book"></i>
+            <span>Reading room</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-wifi"></i>
+            <span>Wifi</span>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-desktop"></i>
+            <span>Digital Library</span>
+          </div>
+          <div class="box flex">
+            <i class="fa-solid fa-washing-machine"></i>
+            <span>Need based Laundry servie provider</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-plate-utensils"></i>
+            <span>Cafeteria</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="amenities top" id="amenities">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h2>Digital Library, Reading Room & Get together area</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="img/l1.jpg" alt="">
+          </div>        
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="img/l2.jpg" alt="">
+          </div>          
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="img/p4.jpg" alt="">
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="img/p5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>Alumni of SVKM Hostel</h5>
+          <h2>Alumni's say</h2>
+        </div>
+
+
+        <div class="para">
+          <p>I had such a good time in this hostel, I felt like coming home to a place I had never been before.
+            The hostel plays super chill music and allows for hanging out on the rooftop.
+            The bunk beds are comfy and easy to climb. The hostel owner will help you with ANYTHING.  
+            The people that were at this hostel were a lot of fun to hang with.
+            Played chess, sang songs and laughed a lot while sharing stories of traveling. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="cafeteria top" id="cafeteria">
+    <div class="container flex">
+      <div class="left">
+        <img src="img/m1.png" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Our Cafeteria</h2>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Canteen</h2>
+            <div class="accordionItemContent">
+              <p>There is a variety of food available at the our canteen.
+                The food ranges from Mini meals priced at Rs 45 to Pastas which are nominally priced at Rs 95.
+                For breakfast one can choose from a variety of Dosas and Uttapams.
+                For lunch there are a number of types of meals ranging from Chinese, North indian, Mini meals,
+                Rajma Chawal and many more. For snacks one can have chaats, sandwichs , pastas or pizzas and
+                indulge in the variety of pastries in case one has a sweet tooth.
+                Good hygiene factor coupled with the good quality food definitely makes the food at this
+                canteen better than a normal college canteen food.</p>
+            </div>
+          </div>
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Food Categories</h2>
+            <div class="accordionItemContent">
+              <p><i class="fas fa-arrow-right"></i></i> Vegeterian<br>
+                <i class="fas fa-arrow-right"></i> Non-Vegeterian<br>
+                <i class="fas fa-arrow-right"></i> Jain
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+
+
+
+  <section class="gallary mtop " id="gallery">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Hostel</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VIEW GALLERY</button>
+        </div>
+      </div>
+
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="img/g1.jpeg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g7.jfif" alt="">
+        </div>
+        <div class="item">
+          <img src="img/g8.jpg" alt="">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30160.422450310845!2d72.83636685!3d19.105339200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c815cd159b%3A0x28ae574780132e0d!2sVile%20Parle%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1670916837769!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- <footer>
+    <div class="container grid top">
+      <div class="box">
+
+        
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+
+      <!-- <div class="box">
+        <h3>Recent News</h3>
+
+
+        <ul>
+          <li>Our Secret Island Boat Tour Is Just for You</li>
+          <li>Chill and Escape in Our Natural Shelters</li>
+          <li>September in Luviana Hotel</li>
+          <li>Live Music Concerts at Luviana</li>
+        </ul>
+      </div> -->
+
+
+      <!-- <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About Luviana</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+
+        <ul>
+          <li>3015 Grand Ave, Cocount Grove, Merrick Way FL 123456</li>
+          <li><i class="far fa-envelope"></i>demoexample@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>  -->
+<footer>
+  <div class="footer">
+    <div class="col-1">
+        <h3>REFERENCE</h3>
+        <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#Amenities" class="nav-link">Amenities</a> </li>
+          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+    </div>
+    <div class="col-2">
+        <h3>APPLY</h3>
+        <form>
+        
+            <br>
+            <button type="login.php">Login</button><br><br><br>
+            <p>©2023 SVKM. All Rights Reserved</p>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3>CONTACT </h3>
+        <p>V.L.Mehta Road, Vile Parle (W),<br> Mumbai, Maharashtra - 400056</p><br>
+        <div class="social-icons">
+            <a href="https://m.facebook.com/ShriVileParleKelavaniMandal/" style="color: ghostwhite;"><i class="fab fa-facebook"></i></a>
+            <a href="" style="color: ghostwhite;"><i class="fab fa-twitter" ></i></a>
+            <a href="https://instagram.com/shri_vileparle_kelavani_mandal?igshid=YmMyMTA2M2Y=" style="color: ghostwhite;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/svkm-stichting-vakkennis-mobiliteit/" style="color: ghostwhite;"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+    </div>
+</div>
+</footer>
+</body>
+
+
+</html>
